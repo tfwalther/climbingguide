@@ -1,0 +1,18 @@
+Changes included in the v3.0.0 release of SQLCipher for Android:
+
+ * Use SQLCipher core 3.0.0
+ * OpenSSL submodule using https github mirror
+ * Removing jar and native libs
+ * Allow SQLiteOpenHelper to accept a SQLiteDatabaseHook
+ * Remove upgradeDatabaseFormatFromVersion1To2 in favor of cipher_migrate
+ * Move map of SQLiteCloseable to allow preKey/postKey operations
+ * Update sqlcipher core prerelease
+ * Update supported versions
+ * Merge branch 'karanpopali' into prerelease
+ * Fixed inter process blob transfer issue.
+ * Upstream update from SQLCipher
+ * Build of OpenSSL binaries and adjust script
+ * Use SQLCipher 3.0.0
+ * Merge branch 'openssl' into prerelease
+ * Pull changes from sqlcipher core
+ * Use prerelease branch of sqlcipher

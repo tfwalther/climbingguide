@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayoutEigenerEintragDetails"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/checkBoxVorstieg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vorstieg" />
+
+        <CheckBox
+            android:id="@+id/checkBoxRP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxoU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ou"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/none" />
+
+        <ImageButton
+            android:id="@+id/imageButtonEintragLoeschen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/eintrag_loeschen"
+            android:src="@drawable/abc_ic_clear_search_api_holo_light" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextGeklettertMit" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/geklettert_mit"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/editTextBemerkungen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/bemerkungen"        
+        android:ems="10"
+        android:inputType="textMultiLine" />    
+    
+</LinearLayout>
+    

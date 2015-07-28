@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <string name="bereits_geklettert">bereits geklettert</string>
+    <string name="own_list">Eigene Wegeliste</string>
+    <string name="eintrag_loeschen">Eintrag löschen</string>
+    <string name="eintrag_aktualisiert">Eintrag aktualisiert</string>
+    <string name="eintrag_loeschen_long">Soll dieser Eintrag aus der eigenen Wegeliste entfernt werden?</string>
+    <string name="eigene_wegeliste_aktualisieren">Eintrag in eigener Wegeliste aktualisieren</string>
+    <string name="ausklappen">ausklappen</string>
+    <string name="einklappen">einklappen</string>
+    <string name="geklettert_mit">Geklettert mit</string>
+    <string name="bemerkungen">Bemerkungen</string>
+    <string name="hinweis_nachstieg">im Nachstieg</string>    
+    <string name="hinweis_nachstieg">im Nachstieg</string>
+    <string name="hinweis_vorstieg">im Vorstieg</string>
+    <string name="hinweis_rp">Rotpunkt</string>
+    <string name="am">Am:</string>
+    <string name="eintrag">Eintrag</string>
+    <string name="eintraege">Einträge</string>
+    <string name="eintraege_geloescht">aus eigener Wegeliste entfernt</string>
+    <string name="anfang">Anfang</string>
+    <string name="ende">Ende</string>
+    <string name="post_listende">der Suchergebnisliste erreicht</string>
+    <string name="im_nachstieg">im Nachstieg</string>
+    <string name="im_vorstieg">im Vorstieg</string>
+    <string name="vorstieg">Vorstieg</string>
+    <string name="rp">RP</string>
+    <string name="ou">oU</string>
+    <string name="oulong">o. U.</string>
+    <string name="vorheriger_weg">vorheriger Weg</string>
+    <string name="nachster_weg">nächster Weg</string>
+    <string name="bestiegene">bestiegene Gipfel</string>
+    <string name="gipfelkuchen">Gipfelkuchen</string>   
+    <string name="kein_gps_aktiviert">Ihre aktuelle Position konnte nicht ermittelt werden. Bitte aktivieren Sie GPS.</string>
+    <string name="nur">nur</string>
+    <string name="ja">Ja</string>
+    <string name="nein">Nein</string>
+    <string name="anzahl_geklettert">Anzahl geklettert</string>   
+    <string name="anzahl_nachgestiegen">Anzahl nachgestiegen</string>   
+    <string name="anzahl_vorgestiegen">Anzahl vorgestiegen</string>   
+    <string name="anzahl_RP">Anzahl vorgestiegen und RP</string>   
+    
+    <string name="nicht_bestiegen">noch nicht bestiegener Gipfel</string>   
+    <string name="nicht_geklettert_markieren_title">Weg aus persönlicher Datenbank entfernen</string>
+    <string name="nicht_geklettert_markieren_desc">Soll der Weg als nicht geklettert markiert werden?</string>
+    <string name="alle_wege">Alle Wege</string>
+    <string name="alle_gebiete">Alle Gebiete</string>
+    <string name="keine_suche_erfolgt">Bisher ist noch keine Suche erfolgt</string>
+    <string name="suchformular">Suchformular</string>
+    <string name="letzte_anfragen">Letzte Suchanfragen</string>
+    <string name="app_name">Elbi</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_search">Suche</string>
+    <string name="action_legend">Legende</string>
+    <string name="show">show</string>
+    <string name="treffer">Treffer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="gebiet">Gebiet</string>
+    <string name="none"></string>
+    <string name="create">erschaffe</string>
+    <string name="destroy">zerstöre</string>
+    <string name="gipfel">Gipfel</string>
+    <string name="gipfelnummer">Gipfelnummer</string>
+    <string name="tag">tag</string>
+    <string name="weg">Weg</string>
+    <string name="schwierigkeit">Schwierigkeit</string>
+    <string name="anzahl">Anzahl</string>
+    <string name="von">von</string>   
+    <string name="bis">bis</string>
+    <string name="minus">-</string>
+    <string name="clear">Clear</string>
+    <string name="letzteSuchanfragen">Letzte Suchanfragen</string>
+    <string name="letzteSuchanfrage">Letzte Suchanfrage</string>
+    <string name="suche_starten">Suche starten</string>
+    <string name="suche_erfolglos">Suche erfolglos - bitte Eingabe ändern</string>
+    <string name="fehlerhafte_eingabe">Fehlerhafte Eingabe - Eingabe wird zurückgesetzt</string>
+    <string name="ok">OK</string>
+    <string name="wegbeschreibung">Wegbeschreibung</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="suchergebnisse">Suchergebnisse</string>
+    <string name="start_suche">Suche starten</string>
+    <string name="live_karte">Live Karte</string>
+    <string name="title_activity_live_karte">Elbi Live Karte</string>
+    <string name="progress_dialog_title_downloading">Download läuft &#x2026;</string>
+    <string name="progress_dialog_title_connecting">Internetverbindung wird hergestellt &#x2026;</string>
+    <string name="user_message_download_complete">Download komplett!</string>
+    <string name="user_message_download_complete_map_long">Der Download der Offline-Karte wurde abgeschlossen.</string>
+    <string name="user_message_download_canceled">Download abgebrochen!</string>
+    <string name="user_message_download_canceled_long">Der Download konnte nicht wie gewünscht beendet werden. Möchten Sie die Offline-Karte benutzen, überprüfen Sie bitte Ihre Internet-Verbindung und wiederholen den Download-Vorgang.</string>
+    <string name="progress_dialog_message_prefix_downloading">Karte wird ins Verzeichnis Elbi/ heruntergeladen.</string>
+    <string name="progress_dialog_message_prefix_connecting">Verbindung herstellen</string>
+    <string name="error_message_general">Fehler beim Herunterladen!</string>
+    <string name="user_message_unzip">Kartendaten werden entpackt.</string>
+    <string name="error_message_ftp_connection">Fehler bei der Verbindungsherstellung zum ftp-Server. Ist deine Internet Verbindung OK?</string>
+    <string name="offline_karte_holen">Karte für Offline-Verwendung herunterladen</string>
+    <string name="offline_karte_updaten">Offline-Karte aktualisieren</string>
+    <string name="error_last_location_unknown">Ihre letzte Position ist unbekannt</string>
+    <string name="snap_to_location_enabled">Zu aktueller Position springen wurde aktiviert</string>
+    <string name="snap_to_location_disabled">Zu aktueller Position springen wurde deaktiviert</string>
+    <string name="unit_symbol_kilometer">&#160;km</string>
+    <string name="unit_symbol_meter">&#160;m</string>
+    <string name="menu_preferences">Einstellungen</string>
+
+    <string-array name="preferences_map_generator_values">
+        <item>OpenStreetMap (offline - empfohlen)</item>
+        <item>Mapnik (online - weltweit)</item>
+        <item>OpenCycleMap (online - weltweit)</item>
+    </string-array>
+    <string-array name="preferences_scale_bar_unit_values">
+        <item>angloamerikanisch (ft, mi)</item>
+        <item>metrisch (m, km)</item>
+    </string-array>
+    <string-array name="preferences_text_scale_values">
+        <item>winzig</item>
+        <item>klein</item>
+        <item>normal</item>
+        <item>groß</item>
+        <item>riesig</item>
+    </string-array>
+
+    <string name="preferences_debug">Entwicklungs-Einstellungen</string>
+    <string name="preferences_general">Allgemeine Einstellungen</string>
+    <string name="preferences_cache_persistence">Cache-Persistenz</string>
+    <string name="preferences_cache_persistence_desc">Zwischenspeicher der Karte beim Beenden beibehalten</string>
+    <string name="preferences_cache_size">Externer Speicher</string>
+    <string name="preferences_cache_size_desc">Größe des Kartenzwischenspeichers (Cache) anpassen</string>
+    <string name="preferences_cache_size_value">%.1f MB</string>
+    <string name="preferences_fullscreen">Vollbildmodus</string>
+    <string name="preferences_fullscreen_desc">Verberge die Statusleiste</string>
+    <string name="preferences_map">Karteneinstellungen</string>
+    <string name="preferences_map_view_mode">Karten</string>
+    <string name="preferences_map_view_mode_desc">Zwischen On- und Offline-Karten wechseln</string>
+    <string name="preferences_move_speed">Scrollgeschwindigkeit</string>
+    <string name="preferences_move_speed_desc">Scrollgeschwindigkeit der Karte anpassen</string>
+    <string name="preferences_move_speed_value">%d %% Scrollgeschwindigkeit</string>
+    <string name="preferences_scale_bar_unit">Kartenmaßstabs-Einheit</string>
+    <string name="preferences_scale_bar_unit_desc">Einheit des Kartenmaßstabs auswählen</string>
+    <string name="preferences_show_location">Ihre Position</string>
+    <string name="preferences_show_location_desc">Aktuelle Position auf Karte anzeigen</string>
+    <string name="preferences_snap_location">Position einrasten</string>
+    <string name="preferences_snap_location_desc">Karte auf die aktuelle Position justieren </string>
+    <string name="preferences_show_scale_bar">Kartenmaßstab</string>
+    <string name="preferences_show_scale_bar_desc">Maßstabsbalken der Karte anzeigen</string>
+    <string name="preferences_text_scale">Schriftgröße</string>
+    <string name="preferences_text_scale_desc">Basisgröße für Karten-Beschriftungen auswählen</string>
+    <string name="preferences_wake_lock">Aktiv bleiben</string>
+    <string name="preferences_wake_lock_desc">Abschaltung des Bildschirms auf Beschreibungsseiten und Karte verhindern</string>
+    <string name="warn_rendertheme_missing">Das gewählte Karten-Theme wurde nicht gefunden.</string>
+    <string name="download_kartendownload">Offline-Kartendownload</string>
+    <string name="download_kartendownload_desc">Aufgrund der zum Teil schlechten Internetanbindung in der sächsischen Schweiz werden Offline-Karten für die Live-Karte benötigt. Die Downloadgröße der Offline-Karte von Sachsen beträgt 73 MB. Um Kosten zu sparen wird für diesen Vorgang eine bestehende WLAN-Internet-Verbindung empfohlen. Soll die Karte heruntergeladen werden?</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="progress_dialog_title_searching">Datenbankzugriff</string>
+    <string name="progress_dialog_title_searching_desc">Datenbanksuche wird ausgeführt &#x2026;</string>
+    <string name="progress_dialog_database_reading_desc">Es wird auf die Datenbank zugegriffen &#x2026;</string>
+    <string name="progress_dialog_database_reading_desc_firstTime">Die Datenbank wird eingerichtet &#x2026; Dieser Vorgang ist nur beim ersten App-Start und nach einem Datenbank-Update notwendig.</string>
+    <string name="progress_dialog_title_write_database">Datenbankerstellung</string>
+    <string name="progress_dialog_title_write_database_desc">Wegedatenbank wird erstellt. Dieser Vorgang ist nur beim ersten Starten der App notwendig.</string>
+    <string name="user_message_search_canceled">Suche abgebrochen!</string>
+    <string name="user_message_search_canceled_long">Die Suche konnte nicht wie gewünscht beendet werden.</string>
+    <string name="list_goto_map">Gipfel auf Karte zeigen</string>
+    <string name="list_beschreibung_speech">Vorlesen</string>
+    <string name="beschreibung_vorlesen">Beschreibung vorlesen lassen</string>
+    <string name="map_gipfel_centered_pre">Karte auf Gipfel</string>
+    <string name="map_gipfel_centered_post">zentriert</string>
+    <string name="details">Details</string>
+    <string name="title_activity_weg_details">Weg Details</string>
+    <string name="tts_not_installed">Text to Speech ist noch nicht installiert</string>
+    <string name="bereits_geklettert">bereits geklettert</string>
+    <string name="geklettert">geklettert</string>
+    <string name="noch_nicht_geklettert">noch nicht geklettert</string>
+    <string name="statistik">Statistik</string>
+    <string name="schwierigkeitsstatistik">Schwierigkeitsstatistik</string>
+    <string name="title_activity_statistik">Statistik</string>
+    <string name="gipfelstatistik">Gipfelstatistik</string>
+    
+</resources>

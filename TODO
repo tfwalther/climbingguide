@@ -1,0 +1,31 @@
+KleFü - ToDo
+
+Testen:
+- Datenbank zerstören (auf tatsächlichem Device)
+- Datenbank Readable holen wird abgebrochen
+
+
+
+Titelseite gestalten (Hintergrundbild - Einstellungen-Button)
+Anzeigeblatt gesltalten
+von Weg zu Gipfel (Karte - zentriert - springen)
+	
+ActionBarItems auch in MapView anzeigen
+ActionBarItems auch in Settings anzeigen
+
+ActionBar Stylen
+
+Maps: - Integration anderer mapsforge-Karten
+ - render themes Unterstützung (insbesondere openandromaps-Unterstützung)
+ - Google Maps Integration
+ - Betrieb ausschließlich mit live-Karte
+ 
+deprecated methods elliminieren
+
+Datenbankerstellung automatisch, wenn noch nicht geschehen => Nachricht schreiben
+evtl. Datenbankverschlüsselung (z.B. mit SQLCipher)
+
+Drop-Down-Meüs im Suchen Screen grafisch verschönern
+ListActivity grafisch besser veranschaulichen
+
+asds

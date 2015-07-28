@@ -1,0 +1,219 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".StatistikActivity" >
+	
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" >
+
+	    <AutoCompleteTextView
+	        android:id="@+id/autoCompleteTextViewGebiet"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="8dp"
+	        android:layout_marginTop="12dp"
+	        android:clickable="true"
+	        android:completionThreshold="1"
+	        android:ems="10"
+	        android:hint="@string/gebiet"
+	        android:inputType="textNoSuggestions"
+	        android:tag="@string/tag"
+	        android:text="@string/none"
+	        android:textColor="@color/black" >
+
+	        <requestFocus />
+	    </AutoCompleteTextView>
+
+	    <TextView
+	        android:id="@+id/TextViewGipfel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/autoCompleteTextViewGebiet"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="12dp"
+	        android:text="@string/gipfel"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	    <AutoCompleteTextView
+	        android:id="@+id/autoCompleteTextViewGipfel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/TextViewGipfel"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="8dp"        
+	        android:layout_marginTop="12dp"
+	        android:clickable="true"
+	        android:completionThreshold="1"
+	        android:ems="10"
+	        android:hint="@string/gipfel"
+	        android:inputType="textNoSuggestions"
+	        android:text="@string/none"
+	        android:textColor="@color/black" />
+
+	    <AutoCompleteTextView
+	        android:id="@+id/AutoCompleteTextViewWeg"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/autoCompleteTextViewGipfel"
+	        android:clickable="true"
+	        android:completionThreshold="1"
+	        android:ems="10"
+	        android:hint="@string/weg"
+	        android:inputType="textNoSuggestions"
+	        android:text="@string/none"
+	        android:layout_marginLeft="8dp"   
+	        android:layout_marginRight="8dp"	            
+	        android:textColor="@color/black" />
+
+	    <AutoCompleteTextView
+	        android:id="@+id/AutoCompleteTextViewGipfelnummer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/TextViewGipfel"
+	        android:layout_marginTop="-5dp"
+	        android:layout_toLeftOf="@+id/TextViewGeklettertAm"
+	        android:layout_toRightOf="@+id/TextViewGipfel"
+	        android:clickable="true"
+	        android:completionThreshold="1"
+	        android:ems="10"
+	        android:hint="@string/gipfelnummer"
+	        android:inputType="textNoSuggestions|number|numberSigned"
+	        android:text="@string/none"
+	        android:textColor="@color/black" />
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/AutoCompleteTextViewWeg"
+	        android:layout_marginTop="8dp"
+	        android:layout_toRightOf="@+id/TextViewSchwierigkeit"
+	        android:orientation="horizontal" >
+
+	        <AutoCompleteTextView
+	            android:id="@+id/AutoCompleteTextViewSchwierigkeitVon"
+	            android:layout_width="70dp"
+	            android:layout_height="wrap_content"
+	            android:clickable="true"
+	            android:completionThreshold="1"
+	            android:ems="10"
+	            android:hint="@string/von"
+	            android:inputType="textNoSuggestions"
+	            android:text="@string/none"
+	            android:textColor="@color/black" />
+
+	        <TextView
+	            android:id="@+id/TextViewSchwierigkeitVonBis"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/minus"
+	            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	        <AutoCompleteTextView
+	            android:id="@+id/AutoCompleteTextViewSchwierigkeitBis"
+	            android:layout_width="70dp"
+	            android:layout_height="wrap_content"
+	            android:clickable="false"
+	            android:completionThreshold="1"
+	            android:ems="10"
+	            android:focusable="false"
+	            android:focusableInTouchMode="false"
+	            android:hint="@string/bis"
+	            android:inputType="textNoSuggestions"
+	            android:text="@string/none"
+	            android:textColor="@color/black" />
+
+	    </LinearLayout>
+
+	    <AutoCompleteTextView
+	        android:id="@+id/AutoCompleteTextViewGipfelnummerBis"
+	        android:layout_width="70dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/AutoCompleteTextViewGipfelnummer"
+	        android:layout_alignBottom="@+id/AutoCompleteTextViewGipfelnummer"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="8dp"   
+	        android:clickable="false"
+	        android:completionThreshold="1"
+	        android:ems="10"
+	        android:focusable="false"
+	        android:focusableInTouchMode="false"
+	        android:hint="@string/bis"
+	        android:inputType="textNoSuggestions|number|numberSigned"
+	        android:text="@string/none"
+	        android:textColor="@color/black" />
+
+	    <TextView
+	        android:id="@+id/TextViewGeklettertAm"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/AutoCompleteTextViewGipfelnummerBis"
+	        android:layout_alignBottom="@+id/AutoCompleteTextViewGipfelnummerBis"
+	        android:layout_toLeftOf="@+id/AutoCompleteTextViewGipfelnummerBis"
+	        android:text="@string/minus"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	    <Button
+	        android:id="@+id/ButtonStarteSuche"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/checkBoxNochNichtGeklettert"
+	        android:layout_marginLeft="8dp"	        
+	        android:layout_marginTop="18dp"
+	        android:drawableLeft="@drawable/ic_action_suche_starten"
+	        android:text="@string/suche_starten" />
+
+	    <Button
+	        android:id="@+id/buttonClear"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/ButtonStarteSuche"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="8dp"	        
+	        android:drawableLeft="@drawable/ic_action_cross"
+	        android:text="@string/clear" />
+
+	    <TextView
+	        android:id="@+id/TextViewSchwierigkeit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/linearLayout1"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="5dp"	        	        
+	        android:text="@string/schwierigkeit"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+ 
+        <CheckBox
+            android:id="@+id/checkBoxGeklettert"
+            android:layout_marginTop="8dp"
+		    android:layout_below="@+id/TextViewSchwierigkeit"            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bereits_geklettert"             
+            android:checked="true" />
+ 
+        <CheckBox
+            android:id="@+id/checkBoxNochNichtGeklettert"
+	    	android:layout_below="@+id/checkBoxGeklettert"            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noch_nicht_geklettert"
+            android:checked="true" />
+
+  
+	</RelativeLayout>
+
+</ScrollView>                  

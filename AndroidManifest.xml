@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.climbingguide.erzgebirsgrenzgebiet"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".ClimbingGuideApplication"        
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light" >
+        <activity
+            android:name="de.climbingguide.erzgebirsgrenzgebiet.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.climbingguide.erzgebirsgrenzgebiet.suche.SucheActivity"
+            android:label="@string/action_search"
+            android:icon="@drawable/ic_action_search"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="de.climbingguide.erzgebirsgrenzgebiet.settings.SettingsActivity"
+            android:label="@string/action_settings"
+            android:icon="@drawable/ic_action_settings"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="de.climbingguide.erzgebirsgrenzgebiet.list.ListActivity"
+            android:label="@string/suchergebnisse"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".suche.SucheActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".suche.SucheActivity" />
+        </activity>
+        <activity
+            android:name="de.climbingguide.erzgebirsgrenzgebiet.ownlist.ListActivity"
+            android:label="@string/own_list"
+            android:icon="@drawable/ic_list"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".suche.SucheActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".suche.SucheActivity" />
+        </activity>
+        <activity
+            android:name="de.climbingguide.erzgebirsgrenzgebiet.maps.LiveKarteActivity"
+            android:label="@string/title_activity_live_karte"
+            android:icon="@drawable/ic_action_world"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="de.climbingguide.erzgebirsgrenzgebiet.statistik.StatistikActivity"
+            android:label="@string/title_activity_statistik"
+            android:icon="@drawable/ic_action_chart_bar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>    
+    </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:klefu="http://schemas.android.com/apk/res-auto" >
+    
+    <item android:id="@+id/action_map"
+      android:icon="@drawable/ic_action_world"
+      android:title="@string/live_karte"
+      klefu:showAsAction="never" />
+    
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_search"
+          android:icon="@drawable/ic_action_search"
+          android:title="@string/action_search"
+          klefu:showAsAction="ifRoom" />
+    
+    <item android:id="@+id/action_statistik"
+          android:icon="@drawable/ic_action_chart_bar"
+          android:title="@string/statistik"
+          klefu:showAsAction="ifRoom" />
+    
+     <item android:id="@+id/own_list"
+          android:icon="@drawable/ic_list"
+          android:title="@string/own_list"
+          klefu:showAsAction="ifRoom" />   
+    
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+          android:icon="@drawable/ic_action_settings"                        
+          android:title="@string/action_settings"
+          klefu:showAsAction="never" />
+</menu>

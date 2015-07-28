@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+<RelativeLayout android:layout_width="fill_parent"
+    android:id="@+id/nonDetailsLayout"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+	android:descendantFocusability="blocksDescendants"        
+    android:padding="8dp" >
+
+    <CheckBox
+        android:id="@+id/checkBoxWegGeklettert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/list_item_schwierigkeit"
+        android:layout_alignParentRight="true"
+        android:text="@string/none" />
+
+    <TextView
+        android:id="@+id/list_item_weg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:paddingTop="5dp"
+        android:text="Wegename"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/list_item_schwierigkeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/list_item_weg"
+        android:layout_alignBottom="@+id/list_item_weg"
+        android:layout_toLeftOf="@+id/checkBoxWegGeklettert"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="Schwierigkeit"
+        android:textColor="@color/black" />
+    
+</RelativeLayout>
+
+<LinearLayout 
+    android:id="@+id/detailsLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"     
+    android:orientation="vertical"
+	android:descendantFocusability="blocksDescendants"    
+	>	
+    
+   <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+       <ImageButton
+           android:id="@+id/buttonvorlesendet"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:contentDescription="@string/beschreibung_vorlesen"
+           android:src="@drawable/ic_action_play_deactivated" 
+           android:layout_gravity="center_vertical"/>
+
+    <TextView
+            android:id="@+id/wegdet"
+            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:paddingLeft="2dp"            
+            android:text="Weg"
+            android:textSize="24sp"
+            android:padding="10dp"            
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/schwierigkeitdet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingLeft="2dp"
+        android:text="Schwier."
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_gravity="center_vertical" />
+    
+    </LinearLayout>
+    
+    <TextView
+            android:id="@+id/beschreibungdet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="2dp"            
+            android:text="Beschreibung"
+            android:textSize="18sp"
+            android:padding="10dp"            
+            android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <CheckBox
+            android:id="@+id/checkBoxBereitsGeklettertdet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/geklettert" />
+
+        <CheckBox
+            android:id="@+id/checkBoxVorstiegdet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vorstieg" />
+
+        <CheckBox
+            android:id="@+id/checkBoxRPdet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rp" />
+
+                
+        
+    </LinearLayout>
+    
+    <CheckBox android:id="@+id/checkBoxoOdet"
+        android:visibility="gone"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="@string/ou" />
+
+    <LinearLayout
+        android:id="@+id/linearlayoutgeklettertam"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    		   
+	</LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>

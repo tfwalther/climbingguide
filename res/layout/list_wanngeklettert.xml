@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="afterDescendants"
+    android:orientation="vertical" >    
+    
+<View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@color/lightgrey"/>        
+    
+<LinearLayout android:id="@+id/linearLayoutEigenerEintrag"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+    <TextView
+        android:id="@+id/textViewdatum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Am: tt.mm.yyyy"
+        android:padding="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewHinweis"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:text="im Nachstieg"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imageViewDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/ausklappen"
+        android:src="@drawable/ic_action_down" />
+
+</LinearLayout>    
+    
+<LinearLayout
+    android:id="@+id/linearLayoutEigenerEintragDetails"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:descendantFocusability="afterDescendants"
+    android:orientation="vertical" >
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/textViewAm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="2dp"
+        android:text="@string/am"
+        android:layout_gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/buttonDatum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="tt.mm.yyyy" />
+
+    <TextView
+        android:id="@+id/textViewHinweisZwei"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:text="im Nachstieg o.U."
+        android:layout_gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/einklappen"
+        android:src="@drawable/ic_action_up" />
+   
+</LinearLayout>
+
+	<include layout="@layout/own_list_details"/>
+
+</LinearLayout>    
+
+</LinearLayout>
+
+
+

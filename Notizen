@@ -1,0 +1,8 @@
+WHERE CLAUSE
+
+SELECT Spalten FROM tabelle GROUP BY Spaltenname
+
+Datumsformat auslesen aus Tabelle
+
+    DateFormat dateF = DateFormat.getDateTimeInstance();
+    String data = dateF.format(new Date(l));

@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:klefu="http://schemas.android.com/apk/res-auto" >
+       
+    <item android:id="@+id/action_start_suche"
+          android:icon="@drawable/ic_action_suche_starten"        
+          android:title="@string/start_suche"
+          klefu:showAsAction="always" />
+</menu>
