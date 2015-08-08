@@ -11,9 +11,8 @@
     <string name="einklappen">einklappen</string>
     <string name="geklettert_mit">Geklettert mit</string>
     <string name="bemerkungen">Bemerkungen</string>
-    <string name="hinweis_nachstieg">im Nachstieg</string>    
-    <string name="hinweis_nachstieg">im Nachstieg</string>
     <string name="hinweis_vorstieg">im Vorstieg</string>
+    <string name="hinweis_nachstieg">im Nachstieg</string>
     <string name="hinweis_rp">Rotpunkt</string>
     <string name="am">Am:</string>
     <string name="eintrag">Eintrag</string>
@@ -166,7 +165,6 @@
     <string name="details">Details</string>
     <string name="title_activity_weg_details">Weg Details</string>
     <string name="tts_not_installed">Text to Speech ist noch nicht installiert</string>
-    <string name="bereits_geklettert">bereits geklettert</string>
     <string name="geklettert">geklettert</string>
     <string name="noch_nicht_geklettert">noch nicht geklettert</string>
     <string name="statistik">Statistik</string>
