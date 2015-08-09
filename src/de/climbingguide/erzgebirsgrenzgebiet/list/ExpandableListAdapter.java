@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
-import net.sqlcipher.Cursor;
-
-import org.mapsforge.core.GeoPoint;
+import org.mapsforge.core.model.LatLong;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -56,6 +54,7 @@ import de.climbingguide.erzgebirsgrenzgebiet.downloader.DownloadHandler;
 import de.climbingguide.erzgebirsgrenzgebiet.downloader.Downloader;
 import de.climbingguide.erzgebirsgrenzgebiet.downloader.DownloaderThread;
 import de.climbingguide.erzgebirsgrenzgebiet.maps.LiveKarteActivity;
+import net.sqlcipher.Cursor;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter implements
 	Downloader, 
@@ -630,7 +629,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements
         	@Override
 			public void onClick(View v) {
         		LiveKarteActivity.setMapWasCentered(false);
-				openLiveKarte(gipfel.getGeopoint(), gipfel.getGipfel());				
+				openLiveKarte(gipfel.getLatLong(), gipfel.getGipfel());				
 			}						
 		}        		
         );
@@ -679,12 +678,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements
 		}		
 	}		
 	
-	public void openLiveKarte(GeoPoint center, String gipfel) {
+	public void openLiveKarte(LatLong center, String gipfel) {
 		if (KleFuContract.mapFileExists()) {
 			Intent intent = new Intent (thisActivity, LiveKarteActivity.class);				
 			intent.putExtra(KleFuEntry.COLUMN_NAME_GIPFEL, gipfel);
-			intent.putExtra(KleFuEntry.BREITE, center.getLatitude());
-			intent.putExtra(KleFuEntry.HOHE, center.getLongitude());
+			intent.putExtra(KleFuEntry.BREITE, center.latitude);
+			intent.putExtra(KleFuEntry.HOHE, center.longitude);
 			thisActivity.startActivity(intent);			
 		} else {
 			karteHerunterladenClick();

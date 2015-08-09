@@ -2,7 +2,9 @@ package de.climbingguide.erzgebirsgrenzgebiet.ownlist;
 
 import java.util.Calendar;
 
-import org.mapsforge.core.GeoPoint;
+import org.mapsforge.core.model.LatLong;
+
+//import org.mapsforge.core.GeoPoint;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -119,7 +121,7 @@ Downloader {
 			@Override
 			public void onClick(View v) {
         		LiveKarteActivity.setMapWasCentered(false);
-				openLiveKarte(childWeg.getGeopoint(), childWeg.getGipfel());	
+				openLiveKarte(childWeg.getLatLong(), childWeg.getGipfel());	
 			}
 		});		
 		holder.imageViewWorld.setOnTouchListener(new OnTouchListener() {
@@ -333,12 +335,12 @@ Downloader {
 		}		
 	}		
 	
-	public void openLiveKarte(GeoPoint center, String gipfel) {
+	public void openLiveKarte(LatLong center, String gipfel) {
 		if (KleFuContract.mapFileExists()) {
 			Intent intent = new Intent (thisActivity, LiveKarteActivity.class);				
 			intent.putExtra(KleFuEntry.COLUMN_NAME_GIPFEL, gipfel);
-			intent.putExtra(KleFuEntry.BREITE, center.getLatitude());
-			intent.putExtra(KleFuEntry.HOHE, center.getLongitude());
+			intent.putExtra(KleFuEntry.BREITE, center.latitude);
+			intent.putExtra(KleFuEntry.HOHE, center.longitude);
 			thisActivity.startActivity(intent);			
 		} else {
 			karteHerunterladenClick();

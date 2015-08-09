@@ -1,18 +1,17 @@
 package de.climbingguide.erzgebirsgrenzgebiet;
 
-import net.sqlcipher.Cursor;
-
-import org.mapsforge.core.GeoPoint;
+import org.mapsforge.core.model.LatLong;
 
 import android.content.ContentValues;
 import de.climbingguide.erzgebirsgrenzgebiet.KleFuContract.KleFuEntry;
+import net.sqlcipher.Cursor;
 
 public class Gipfel {
 	private String gebiet;
 	private String untergebiet;
 	private String gipfel;
 	private Integer gipfelnummer;
-	private GeoPoint geopoint;
+	private LatLong geopoint;
 	private boolean bestiegen;
 	private boolean imVorstieg;
 	private Integer gipfelId=null;
@@ -56,7 +55,7 @@ public class Gipfel {
 		this.gebiet = c.getString(1);
 		this.gipfelnummer = c.getInt(3);
 		this.untergebiet = c.getString(2);
-		this.geopoint = new GeoPoint(c.getDouble(4), c.getDouble(5));
+		this.geopoint = new LatLong(c.getDouble(4), c.getDouble(5));
 		this.bestiegen = c.getInt(6)>0;
 		this.gipfelId = c.getInt(0);
 	    c.close();		
@@ -104,7 +103,7 @@ public class Gipfel {
 		this.gebiet = c.getString(0);
 		this.gipfelnummer = c.getInt(2);
 		this.untergebiet = c.getString(1);
-		this.geopoint = new GeoPoint(c.getDouble(3), c.getDouble(4));
+//		this.geopoint = new GeoPoint(c.getDouble(3), c.getDouble(4));
 		this.bestiegen = c.getInt(5)>0;
 		this.gipfel = c.getString(6);
 		this.imVorstieg = c.getInt(7)>0;
@@ -147,11 +146,11 @@ public class Gipfel {
 		this.untergebiet = untergebiet;
 	}
 
-	public GeoPoint getGeopoint() {
+	public LatLong getLatLong() {
 		return geopoint;
 	}
 
-	public void setGeopoint(GeoPoint geopoint) {
+	public void setGeopoint(LatLong geopoint) {
 		this.geopoint = geopoint;
 	}
 	
