@@ -109,11 +109,13 @@ public class LetzteSuchanfragenFragment extends Fragment implements Sucher {
 		}
 	});
     } catch (Exception e) {
+//    	if (arrayListSuchanfrage.size() < 0) {
         	ListView listView = (ListView) rootView.findViewById(R.id.listViewLetzteSuchanfragen);
         	ArrayList<String> arrayListKeineSucheErfolgt = new ArrayList<String>();
         	arrayListKeineSucheErfolgt.add(getString(R.string.keine_suche_erfolgt));
         	StringListAdapterLeft adapter = new StringListAdapterLeft(getActivity().getApplicationContext(),  arrayListKeineSucheErfolgt);   		 
-   		 	listView.setAdapter(adapter);   		 	   		 
+   		 	listView.setAdapter(adapter);  
+//    	}
     }
         
         return rootView;

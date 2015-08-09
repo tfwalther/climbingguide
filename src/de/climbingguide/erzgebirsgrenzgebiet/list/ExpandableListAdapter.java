@@ -664,8 +664,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements
     }
     
     @Override
-    public void notifyDataSetChanged () {
+    public void notifyDataSetChanged() {
     	eigeneWegHolder.clear();
+//    	v.notifyDataSetChanged();    	
     	super.notifyDataSetChanged();    	
     }
 	

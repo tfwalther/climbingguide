@@ -150,11 +150,11 @@ public class ListFragment extends Fragment implements OnChildClickListener {
 public boolean onChildClick(ExpandableListView parent, View v, int groupPosition,
 		int childPosition, long id) {
 
-	WrapperExpandableListAdapter adapter=((WrapperExpandableListAdapter)parent.getExpandableListAdapter());
+	WrapperExpandableListAdapter wrapper_adapter=((WrapperExpandableListAdapter)parent.getExpandableListAdapter());
 	
-	Weg childWeg=(Weg)adapter.getChild(groupPosition, childPosition);
+	Weg childWeg=(Weg)wrapper_adapter.getChild(groupPosition, childPosition);
 	childWeg.setShownDetailed(!childWeg.isShownDetailed());
-	adapter.notifyDataSetChanged();	
+	adapter.notifyDataSetChanged();
 	return true;
 }
 	
