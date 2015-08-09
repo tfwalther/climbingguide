@@ -10,7 +10,7 @@ import de.climbingguide.erzgebirsgrenzgebiet.ActionBarAppActivity;
 import de.climbingguide.erzgebirsgrenzgebiet.KleFuContract;
 import de.climbingguide.erzgebirsgrenzgebiet.R;
 
-public class GipfelnummerAdapter extends ArrayAdapter<Integer> {
+public class GipfelnummerAdapter extends ArrayAdapter<String> {
 
 	private final LayoutInflater mLayoutInflater;	
 	private int startNummer;
@@ -29,8 +29,8 @@ public class GipfelnummerAdapter extends ArrayAdapter<Integer> {
 	}
 
 	@Override
-	public Integer getItem(int position) {
-		return (Integer)position+startNummer;
+	public String getItem(int position) {
+		return ((Integer)(position+startNummer)).toString();
 	}
 
 	@Override
@@ -56,6 +56,10 @@ public class GipfelnummerAdapter extends ArrayAdapter<Integer> {
 		return convertView;
 	}
 
+//    public String convertToString(int position) {
+//        return getItem(position).toString();
+//    }	
+	
 	public int getStartNummer() {
 		return startNummer;
 	}

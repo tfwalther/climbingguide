@@ -262,8 +262,8 @@ public class FormularFragment extends Fragment implements Sucher{
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position,
 					long id) {
-				Integer gipfelnummer = (Integer)parent.getItemAtPosition(position);
-				setupGipfelnummerBis(gipfelnummer);
+				String gipfelnummer = (String)parent.getItemAtPosition(position);
+				setupGipfelnummerBis(Integer.parseInt(gipfelnummer));
 				if (gebietIsKnown) {
 					Bundle bundle = new Bundle();
 					bundle.putString(KleFuEntry.COLUMN_NAME_GEBIET, actvGebiet.getText().toString());
@@ -333,7 +333,7 @@ public class FormularFragment extends Fragment implements Sucher{
 				actvGipfelnummerVon.setText(gipfelnummer.toString());
 				setupGipfelnummerBis(gipfelnummer);
 				
-				final Integer gipfelId = c.getInt(c.getColumnIndexOrThrow(KleFuEntry.COLUMN_NAME_GIPFELID));
+				final Integer gipfelId = c.getInt(c.getColumnIndexOrThrow("_id"));
 				loaderWege.setGipfelId(gipfelId);
 				adapterWege.setGipfelId(gipfelId);
 				thisActivity.getSupportLoaderManager().restartLoader(ID_WEGE, null, loaderCallbacksWege);
@@ -492,6 +492,7 @@ private void clear() {
 	 actvGipfelnummerBis.setClickable(false);
 	 actvGipfelnummerBis.setFocusable(false);
 	 actvGipfelnummerBis.setFocusableInTouchMode(false);
+	 actvSchwierigkeitVon.setText("");
 	 actvSchwierigkeitBis.setText("");
 	 actvSchwierigkeitBis.setClickable(false);
 	 actvSchwierigkeitBis.setFocusable(false);
@@ -603,12 +604,12 @@ static class CursorLoaderWege extends CursorLoader{
  			+KleFuEntry.COLUMN_NAME_SCHWIERIGKEIT_RP+", "
  			+KleFuEntry.COLUMN_NAME_OU+", "
  			+KleFuEntry.COLUMN_NAME_RP+", "
- 			+KleFuEntry.COLUMN_NAME_GIPFELID; 			
+ 			+KleFuEntry.COLUMN_NAME_GIPFELID+", "; 			
  		sqlQuery +="COUNT("+KleFuEntry.COLUMN_NAME_WEGNAME+") AS "+KleFuEntry.NUMBERS;
+ 		sqlQuery += " FROM "+KleFuEntry.TABLE_NAME_WEGE;
  		if (gipfelId!=null) {
  			sqlQuery += " WHERE "+KleFuEntry.COLUMN_NAME_GIPFELID+" LIKE "+gipfelId;
  		} 		
- 		sqlQuery += " FROM "+KleFuEntry.TABLE_NAME_WEGE;
  		sqlQuery += " GROUP BY "+KleFuEntry.COLUMN_NAME_WEGNAME;
  		sqlQuery += " ORDER BY "+KleFuEntry.COLUMN_NAME_WEGNAME;
  		
@@ -664,7 +665,7 @@ public Integer getGipfelnummer() {
 @Override
 public Integer getGipfelnummerBis() {
 	try {
-		return Integer.parseInt(actvSchwierigkeitBis.getText().toString());
+		return Integer.parseInt(actvGipfelnummerBis.getText().toString());
 	}
 	catch (Exception e) {
 		return 0;

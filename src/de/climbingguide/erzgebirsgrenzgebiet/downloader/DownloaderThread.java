@@ -135,7 +135,8 @@ public class DownloaderThread extends Thread
                 	
 //            		boolean status = ftpDownload("/pub/misc/openstreetmap/openandromaps/maps/Germany/sachsen.zip", fileName);
                 } else if (whichMap == MAPSFORGE) {                                                                                            
-	                if (ftpDownload(KleFuEntry.DOWNLOAD_FTP_SERVER, KleFuEntry.DOWNLOAD_MAP_FTP_FILE, "sachsen.map")) {
+//	                if (ftpDownload(KleFuEntry.DOWNLOAD_FTP_SERVER, KleFuEntry.DOWNLOAD_MAP_FTP_FILE, "sachsen.map")) {
+	                if (httpDownload(KleFuEntry.DOWNLOAD_HTTP_URL_SACHSEN, "sachsen.map")) {
 		        		// 	notify completion
 		                msg = Message.obtain(activityHandler,
 		                                KleFuEntry.MESSAGE_DOWNLOAD_COMPLETE);

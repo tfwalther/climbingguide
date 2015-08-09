@@ -119,6 +119,7 @@ public final class KleFuContract {
     	// Für Download - Krams
     	public static final String DOWNLOAD_MAP_FTP_FILE = "/maps/europe/germany/sachsen.map";
     	public static final String DOWNLOAD_FTP_SERVER = "ftp.mapsforge.org";
+    	public static final String DOWNLOAD_HTTP_URL_SACHSEN = "http://download.mapsforge.org" + DOWNLOAD_MAP_FTP_FILE;    	
     	public static final String DOWNLOAD_LOCAL_DIRECTORY = Environment.getExternalStorageDirectory().getPath() + "/Elbi/";
     	public static final String DOWNLOAD_LOCAL_MAP_NAME = "sachsen.map";
     	public static final int DOWNLOAD_BUFFER_SIZE = 4096;

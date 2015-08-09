@@ -87,7 +87,7 @@ public class CursorAdapterWege extends CursorAdapter {
  			+KleFuEntry.COLUMN_NAME_SCHWIERIGKEIT_RP+", "
  			+KleFuEntry.COLUMN_NAME_OU+", "
  			+KleFuEntry.COLUMN_NAME_RP+", "
- 			+KleFuEntry.COLUMN_NAME_GIPFELID;
+ 			+KleFuEntry.COLUMN_NAME_GIPFELID+", ";
 	 sqlQuery +="COUNT("+KleFuEntry.COLUMN_NAME_WEGNAME+") AS "+KleFuEntry.NUMBERS;
 
  	 sqlQuery += " FROM "+KleFuEntry.TABLE_NAME_WEGE;
