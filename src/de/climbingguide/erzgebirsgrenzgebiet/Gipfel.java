@@ -103,7 +103,7 @@ public class Gipfel {
 		this.gebiet = c.getString(0);
 		this.gipfelnummer = c.getInt(2);
 		this.untergebiet = c.getString(1);
-//		this.geopoint = new GeoPoint(c.getDouble(3), c.getDouble(4));
+		this.geopoint = new LatLong(c.getDouble(3), c.getDouble(4));
 		this.bestiegen = c.getInt(5)>0;
 		this.gipfel = c.getString(6);
 		this.imVorstieg = c.getInt(7)>0;

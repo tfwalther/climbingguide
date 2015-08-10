@@ -48,10 +48,6 @@
 		    android:summary="@string/preferences_cache_persistence_desc"
 			android:key="cachePersistence"
 			android:defaultValue="true" />
-		<de.climbingguide.erzgebirsgrenzgebiet.settings.CacheSizePreference
-			android:title="@string/preferences_cache_size" 
-			android:summary="@string/preferences_cache_size_desc" 
-			android:key="cacheSize" />
 	</PreferenceCategory>
 
 

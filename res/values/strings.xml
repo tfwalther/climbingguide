@@ -122,9 +122,6 @@
     <string name="preferences_general">Allgemeine Einstellungen</string>
     <string name="preferences_cache_persistence">Cache-Persistenz</string>
     <string name="preferences_cache_persistence_desc">Zwischenspeicher der Karte beim Beenden beibehalten</string>
-    <string name="preferences_cache_size">Externer Speicher</string>
-    <string name="preferences_cache_size_desc">Größe des Kartenzwischenspeichers (Cache) anpassen</string>
-    <string name="preferences_cache_size_value">%.1f MB</string>
     <string name="preferences_fullscreen">Vollbildmodus</string>
     <string name="preferences_fullscreen_desc">Verberge die Statusleiste</string>
     <string name="preferences_map">Karteneinstellungen</string>
