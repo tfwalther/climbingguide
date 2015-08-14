@@ -643,7 +643,7 @@ public String getGebiet() {
 
 @Override
 public String getGipfel() {
-	return actvGebiet.getText().toString();
+	return actvGipfel.getText().toString();
 }
 
 @Override

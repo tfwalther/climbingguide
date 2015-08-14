@@ -14,7 +14,7 @@ import de.climbingguide.erzgebirsgrenzgebiet.KleFuContract.KleFuEntry;
 import de.climbingguide.erzgebirsgrenzgebiet.downloader.DownloadHandler;
 import de.climbingguide.erzgebirsgrenzgebiet.downloader.Downloader;
 import de.climbingguide.erzgebirsgrenzgebiet.downloader.DownloaderThread;
-import de.climbingguide.erzgebirsgrenzgebiet.maps.LiveKarteActivity;
+import de.climbingguide.erzgebirsgrenzgebiet.maps.RenderTheme4;
 import de.climbingguide.erzgebirsgrenzgebiet.settings.SettingsActivity;
 import de.climbingguide.erzgebirsgrenzgebiet.statistik.StatistikActivity;
 import de.climbingguide.erzgebirsgrenzgebiet.suche.SucheActivity;
@@ -132,7 +132,10 @@ public void onResume() {
 	
 	public void openLiveKarte() {
 		if (KleFuContract.mapFileExists()) {
-			Intent intent = new Intent(this, LiveKarteActivity.class);
+//			Intent intent = new Intent(this, LiveKarteActivity.class);
+//			Intent intent = new Intent(this, LongPressAction.class);
+			Intent intent = new Intent(this, RenderTheme4.class);
+//			Intent intent = new Intent(this, SamplesBaseActivity.class);
 			startActivity(intent);			
 		} else {
 			karteHerunterladenClick();

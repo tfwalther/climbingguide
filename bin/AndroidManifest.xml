@@ -70,7 +70,7 @@
                 android:value=".suche.SucheActivity" />
         </activity>
         <activity
-            android:name="de.climbingguide.erzgebirsgrenzgebiet.maps.LiveKarteActivity"
+            android:name="de.climbingguide.erzgebirsgrenzgebiet.maps.RenderTheme4"
             android:label="@string/title_activity_live_karte"
             android:icon="@drawable/ic_action_world"
             android:parentActivityName=".MainActivity" >

@@ -40,11 +40,13 @@ public class LiveKarteActivity extends Activity {
     private TileCache tileCache;
     private TileRendererLayer tileRendererLayer;
 
+	protected void onLongPress(final LatLong position) {
+		Toast.makeText(this, position.toString(), Toast.LENGTH_LONG).show();
+	}
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        AndroidGraphicFactory.createInstance(this.getApplication());
 
         this.mapView = new MapView(this);
         setContentView(this.mapView);
