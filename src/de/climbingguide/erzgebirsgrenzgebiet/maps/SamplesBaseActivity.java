@@ -35,6 +35,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.audiofx.BassBoost.Settings;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -46,7 +47,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import de.climbingguide.erzgebirsgrenzgebiet.ClimbingGuideApplication;
 import de.climbingguide.erzgebirsgrenzgebiet.R;
-import de.climbingguide.erzgebirsgrenzgebiet.KleFuContract.KleFuEntry;
 import de.climbingguide.erzgebirsgrenzgebiet.settings.SettingsActivity;
 
 /**
@@ -76,7 +76,7 @@ public abstract class SamplesBaseActivity extends MapViewerTemplate implements S
 
 	@Override
 	protected MapPosition getDefaultInitialPosition() {
-		return new MapPosition(new LatLong(KleFuEntry.DEFAULT_LATITUDE, KleFuEntry.DEFAULT_LONGITUDE), (byte) 12);
+		return new MapPosition(new LatLong(52.517037, 13.38886), (byte) 12);
 	}
 
 	@Override
@@ -95,9 +95,9 @@ public abstract class SamplesBaseActivity extends MapViewerTemplate implements S
 	}
 
 	protected void createTileCaches() {
-		boolean threaded = true;
-		int queueSize = 8;
-		boolean persistent = sharedPreferences.getBoolean("cachePersistence", true);
+		boolean threaded = sharedPreferences.getBoolean(ClimbingGuideApplication.SETTING_TILECACHE_THREADING, true);
+		int queueSize = Integer.parseInt(sharedPreferences.getString(ClimbingGuideApplication.SETTING_TILECACHE_QUEUESIZE, "4"));
+		boolean persistent = sharedPreferences.getBoolean(ClimbingGuideApplication.SETTING_TILECACHE_PERSISTENCE, true);
 
 		this.tileCaches.add(AndroidUtil.createTileCache(this, getPersistableId(),
 				this.mapView.getModel().displayModel.getTileSize(), this.getScreenRatio(),
@@ -110,7 +110,7 @@ public abstract class SamplesBaseActivity extends MapViewerTemplate implements S
 	 * @return the map file name to be used
 	 */
 	protected String getMapFileName() {
-		return "/Elbi/sachsen.map";
+		return "/ELbi/sachsen.map";
 	}
 
 	protected void onDestroy() {
@@ -180,7 +180,7 @@ public abstract class SamplesBaseActivity extends MapViewerTemplate implements S
 		switch (item.getItemId()) {
 			case R.id.menu_preferences:
 				intent = new Intent(this, SettingsActivity.class);
-//				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
 //				if (renderThemeStyleMenu != null) {
 //					intent.putExtra(SettingsActivity.RENDERTHEME_MENU, renderThemeStyleMenu);
 //				}
